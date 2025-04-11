@@ -35,7 +35,7 @@ async function subirVideo(request, response) {
   }
 
   // ffmpeg permite obtener los metadatos del video y de ahi sacar la duracion de este
-  ffmpeg.ffprobe(file.path, (err, metadata) => {
+  /*ffmpeg.ffprobe(file.path, (err, metadata) => {
     
     // console.log(metadata)
     // console.log(metadata.format)
@@ -52,7 +52,7 @@ async function subirVideo(request, response) {
     }
 
   });
-
+  */
   const result = await Controller.subirVideo(file.path, file.originalname, file.size);
 
   // Una vez realizada correctamente la peticion anterior se elimina el archivo temporal generado
